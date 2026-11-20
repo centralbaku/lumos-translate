@@ -1,0 +1,7 @@
+.lumos-tr .lumos-filters{margin:16px 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.lumos-tr .lumos-count{color:#646970}
+.lumos-tr .lumos-strings td{vertical-align:top}
+.lumos-tr .lumos-strings textarea{width:100%;min-width:160px}
+.lumos-tr .lumos-src{max-width:320px;word-break:break-word}
+.lumos-tr .lumos-src small{color:#8c8f94}
+.lumos-tr .lumos-usage{list-style:disc;padding-left:20px}
