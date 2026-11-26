@@ -13,7 +13,9 @@ class Lumos_TR_Languages {
 	public static function all() {
 		$langs = get_option( self::OPTION, array() );
 		if ( empty( $langs ) ) {
-			$locale = get_locale() ?: 'en_US';
+			// Read the site language directly. get_locale() would run our own 'locale'
+			// filter, which calls back into all() and loops until PHP runs out of memory.
+			$locale = get_option( 'WPLANG' ) ?: 'en_US';
 			$slug   = strtolower( substr( $locale, 0, 2 ) );
 			$langs  = array( $slug => array( 'name' => $locale, 'locale' => $locale, 'flag' => '', 'rtl' => 0 ) );
 		}
