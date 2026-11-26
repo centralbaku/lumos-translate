@@ -8,6 +8,7 @@
  * Author:            Lumos
  * License:           GPL-2.0-or-later
  * Text Domain:       lumos-translate
+ * Update URI:        https://github.com/centralbaku/lumos-translate
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -16,6 +17,13 @@ define( 'LUMOS_TR_VERSION', '1.0.0' );
 define( 'LUMOS_TR_FILE', __FILE__ );
 define( 'LUMOS_TR_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LUMOS_TR_URL', plugin_dir_url( __FILE__ ) );
+
+// Shared LUMOS admin menu (identical copy ships in every Lumos plugin)
+require_once LUMOS_TR_DIR . 'includes/lumos-menu.php';
+
+// Shared GitHub updater: every version pushed to main is offered as a WordPress update.
+require_once LUMOS_TR_DIR . 'includes/lumos-updater.php';
+new Lumos_GitHub_Updater( __FILE__, 'centralbaku/lumos-translate', LUMOS_TR_VERSION );
 
 require_once LUMOS_TR_DIR . 'includes/class-languages.php';
 require_once LUMOS_TR_DIR . 'includes/class-router.php';
