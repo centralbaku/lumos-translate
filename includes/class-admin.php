@@ -26,7 +26,15 @@ class Lumos_TR_Admin {
 	}
 
 	public static function menu() {
-		add_menu_page( 'Lumos Translate', 'Lumos Translate', self::CAP, self::SLUG, array( __CLASS__, 'page' ), 'dashicons-translation', 80 );
+		// Listed as "Translate" under the shared LUMOS menu.
+		lumos_menu_add_product(
+			self::SLUG,
+			__( 'Translate', 'lumos-translate' ),
+			array( __CLASS__, 'page' ),
+			__( 'Translate pages, menus and theme strings.', 'lumos-translate' ),
+			self::CAP,
+			'dashicons-translation'
+		);
 	}
 
 	protected static function url( $tab, $extra = array() ) {

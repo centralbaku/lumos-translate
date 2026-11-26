@@ -17,6 +17,9 @@ define( 'LUMOS_TR_FILE', __FILE__ );
 define( 'LUMOS_TR_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LUMOS_TR_URL', plugin_dir_url( __FILE__ ) );
 
+// Shared LUMOS admin menu (identical copy ships in every Lumos plugin)
+require_once LUMOS_TR_DIR . 'includes/lumos-menu.php';
+
 require_once LUMOS_TR_DIR . 'includes/class-languages.php';
 require_once LUMOS_TR_DIR . 'includes/class-router.php';
 require_once LUMOS_TR_DIR . 'includes/class-posts.php';
