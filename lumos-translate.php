@@ -22,7 +22,6 @@ define( 'LUMOS_TR_URL', plugin_dir_url( __FILE__ ) );
 require_once LUMOS_TR_DIR . 'includes/lumos-menu.php';
 
 // Shared GitHub updater: every version pushed to main is offered as a WordPress update.
-// This repository is private: sites need LUMOS_GITHUB_TOKEN in wp-config.php.
 require_once LUMOS_TR_DIR . 'includes/lumos-updater.php';
 new Lumos_GitHub_Updater( __FILE__, 'centralbaku/lumos-translate', LUMOS_TR_VERSION );
 
